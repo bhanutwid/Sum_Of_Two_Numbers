@@ -21,4 +21,12 @@ class TestsSumOfTwoNumbers extends TestCase
         $this->expectException(InvalidArgumentException::class);
         SumOfTwoNumbers('b', "$");
     }
+    public function testSumWithZero() 
+    {
+        $this->assertEquals(0, SumOfTwoNumbers(0, 0));
+    }
+    public function testSumWithLargeNumbers() 
+    {
+        $this->assertEquals(300000, SumOfTwoNumbers(100000, 200000));
+    }
 }
